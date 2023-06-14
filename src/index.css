@@ -1,0 +1,31 @@
+@font-face {
+    font-family: NetflixSans;
+    src: url(./fonts/NetflixSans-Regular.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: NetflixSans;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+body{
+    background-color: #000;
+}
+
+::-webkit-scrollbar{
+    width: 5px;
+    height: 5px;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #E50914;
+    border-radius: 5px;
+}
