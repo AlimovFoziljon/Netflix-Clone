@@ -13,7 +13,7 @@ const FilmsCategory = ({ title, movie_request, isLargeRow }) => {
     useEffect(() => {
         const fetchDatas = async () => {
             const responseData = await axios.get(movie_request)
-            setMovies(responseData?.data?.results);
+            setMovies(responseData.data.results);
         }
         fetchDatas();
     }, [movie_request])
@@ -21,7 +21,7 @@ const FilmsCategory = ({ title, movie_request, isLargeRow }) => {
     const fetchMovieTrailer = async (movie) => {
         await axios.get("/movie/" + movie?.id.toString() + request.trailerQuery)
             .then((responseData) => {
-                setTrailerUrl(responseData.data.results[0].key)
+                setTrailerUrl(responseData.data.results[0]?.key)
             })
             .catch((error) => console.error(error))
     }
